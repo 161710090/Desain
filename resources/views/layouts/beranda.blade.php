@@ -56,12 +56,17 @@
           <li><a href="#services">Fasilitas</a></li>
           <li><a href="#portfolio">Galerry</a></li>
           <li><a href="#team">Kesiswaan</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
+          <li class="">
+           <div class="top-right links">
+                    @auth
+                       
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                        
+                    @endauth
+                </div>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+            
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
@@ -160,7 +165,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>About Us</h3>
+          <h3></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </header>
 
@@ -168,11 +173,11 @@
 
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
-              <div class="{{asset('assets/img')}}">
-                <img src="{{asset('assets/img/about-mission.jpg')}}" alt="" class="img-fluid">
+            <div class="{{asset('assets/img')}}">
+                <img src="{{asset('assets/img/trm.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <h2 class="title"><a href="#">Training Motivasi</a></h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
@@ -182,10 +187,10 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="{{asset('assets/img')}}">
-                <img src="{{asset('assets/img/about-plan.jpg')}}" alt="" class="img-fluid">
+                <img src="{{asset('assets/img/dkw.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <h2 class="title"><a href="#">Istigotsah</a></h2>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
@@ -195,10 +200,10 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               <div class="{{asset('assets/img')}}">
-                <img src="{{asset('assets/img/about-vision.jpg')}}" alt="" class="img-fluid">
+                <img src="{{asset('assets/img/art.jpg')}}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <h2 class="title"><a href="#">Artikel</a></h2>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
               </p>
@@ -361,16 +366,16 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
+          <h3 class="section-title">Galerry</h3>
         </header>
 
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter="*" class="filter-active">Semua</li>
+              <li data-filter=".filter-app">Fasilitas Skolah</li>
+              <li data-filter=".filter-card">Kegiatan Skolah</li>
+              <li data-filter=".filter-web">Agenda Santri</li>
             </ul>
           </div>
         </div>
@@ -382,11 +387,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/app1.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/app1.jpg')}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">App 1</a></h4>
+               
                 <p>App</p>
               </div>
             </div>
@@ -397,11 +402,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/web3.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/web3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Web 3</a></h4>
+               
                 <p>Web</p>
               </div>
             </div>
@@ -412,11 +417,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/app2.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/app2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">App 2</a></h4>
+               
                 <p>App</p>
               </div>
             </div>
@@ -427,11 +432,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/card2.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/card2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Card 2</a></h4>
+               
                 <p>Card</p>
               </div>
             </div>
@@ -442,11 +447,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/web2.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/web2.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Web 2</a></h4>
+               
                 <p>Web</p>
               </div>
             </div>
@@ -457,11 +462,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/app3.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/app3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">App 3</a></h4>
+               
                 <p>App</p>
               </div>
             </div>
@@ -472,11 +477,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/card1.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/card1.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Card 1</a></h4>
+               
                 <p>Card</p>
               </div>
             </div>
@@ -487,11 +492,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/card3.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/card3.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Card 3</a></h4>
+               
                 <p>Card</p>
               </div>
             </div>
@@ -502,11 +507,11 @@
               <figure>
                 <img src="{{asset('assets/img/portfolio/web1.jpg')}}" class="img-fluid" alt="">
                 <a href="{{asset('assets/img/portfolio/web1.jpg')}}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
+               
                 <p>Web</p>
               </div>
             </div>

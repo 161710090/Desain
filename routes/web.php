@@ -14,6 +14,9 @@
 Route::get('/beranda', function () {
     return view('layouts.beranda');
 });
+Route::get('/admin', function () {
+    return view('layouts.admin');
+});
 
 Auth::routes();
 
